@@ -1,0 +1,113 @@
+td {
+    width: 75px;
+    height: 15px;
+    border: 1px solid;
+    text-align: center;
+}
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.student-table th, .student-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.student-table th {
+    background-color: #f2f2f2;
+}
+
+.action-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #45a049;
+}
+
+.update-form {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.update-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.update-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.modal-body, .modal-footer {
+    padding: 10px;
+}
+
+.close {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.modal-header, .modal-body, .modal-footer {
+    padding: 15px;
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-body, .modal-footer {
+    background-color: #f8f9fa;
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.close {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #fff;
+    text-decoration: none;
+}

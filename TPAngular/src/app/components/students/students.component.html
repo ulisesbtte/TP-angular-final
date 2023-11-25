@@ -1,0 +1,76 @@
+
+<table class="student-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Dirección</th>
+            <th>Género</th>
+            <th>Estado</th>
+            <th>Teléfono</th>
+            <th>Grupo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of studentList">
+            <td>{{student.id}}</td>
+            <td>{{student.dni}}</td>
+            <td>{{student.firstName}}</td>
+            <td>{{student.lastName}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.address}}</td>
+            <td>{{student.gender}}</td>
+            <td>{{student.status}}</td>
+            <td>{{student.phone}}</td>
+            <td>{{student.cohort}}</td>
+            <td>
+                <button (click)="update(ver, student)" class="action-button">Actualizar</button>
+                <button (click)="delete(student.id)" class="action-button">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #ver let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title">VER ESTUDIANTE</h5>
+    </div>
+    <div class="modal-body">
+        <label>Id:</label>
+        <input class="form-control" [(ngModel)]="id2" readonly>
+        <label>DNI:</label>
+        <input class="form-control" [(ngModel)]="dni2" ngbAutofocus>
+        <label> Nombre:</label>
+        <input class="form-control" [(ngModel)]="lastName2">
+        <label>Apellido:</label>
+        <input class="form-control" [(ngModel)]="firstName2">
+        <label>Email:</label>
+        <input class="form-control" [(ngModel)]="email2">
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" (click)="modal.close()">Guardar</button>
+    </div>
+</ng-template>
+<div class="update-form">
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" [(ngModel)]="dni" class="input-field">
+    <br>
+
+    <label for="firstName">Nombre:</label>
+    <input type="text" id="firstName" [(ngModel)]="firstName" class="input-field">
+    <br>
+
+    <label for="lastName">Apellido:</label>
+    <input type="text" id="lastName" [(ngModel)]="lastName" class="input-field">
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" [(ngModel)]="email" class="input-field">
+    <br>
+
+    <button (click)="save()" class="action-button">Guardar</button>
+</div>
